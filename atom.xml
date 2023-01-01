@@ -6,7 +6,7 @@
   <link href="https://winniewuwinnie.github.io/atom.xml" rel="self"/>
   
   <link href="https://winniewuwinnie.github.io/"/>
-  <updated>2023-01-01T07:58:18.451Z</updated>
+  <updated>2023-01-01T08:04:41.842Z</updated>
   <id>https://winniewuwinnie.github.io/</id>
   
   <author>
@@ -15,27 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>this 的指向觀念</title>
-    <link href="https://winniewuwinnie.github.io/2023/01/01/this-%E7%9A%84%E6%8C%87%E5%90%91%E8%A7%80%E5%BF%B5/"/>
-    <id>https://winniewuwinnie.github.io/2023/01/01/this-%E7%9A%84%E6%8C%87%E5%90%91%E8%A7%80%E5%BF%B5/</id>
-    <published>2023-01-01T07:57:50.000Z</published>
-    <updated>2023-01-01T07:58:18.451Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>許多的主流框架都使用到 this</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;許多的主流框架都使用到 this&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>JS 常見縮寫</title>
