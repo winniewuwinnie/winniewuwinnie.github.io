@@ -14,9 +14,26 @@
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><span id="more"></span>
 <h2 id="ES6-語法糖與新增語法"><a href="#ES6-語法糖與新增語法" class="headerlink" title="ES6 語法糖與新增語法"></a>ES6 語法糖與新增語法</h2><ul>
 <li><strong>語法糖</strong>：即為<strong>縮寫</strong>，寫法更為簡潔，但不影響運作。</li>
-<li><strong>新增語法</strong>：寫法簡潔，但會影響作。<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const obj=&#123;</span><br><span class="line">  myName:&quot;Winnie&quot;,</span><br><span class="line">  fn:function()&#123;</span><br><span class="line">    return this.myName;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//物件中的函示可以縮寫如下</span><br><span class="line">const obj=&#123;</span><br><span class="line">  myName:&quot;Winnie&quot;,</span><br><span class="line">  fn()&#123;</span><br><span class="line">    return this.myName;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><strong>新增語法</strong>：寫法簡潔，但會影響作。 ex.箭頭函式</li>
 </ul>
-<h2 id="物件字面值"><a href="#物件字面值" class="headerlink" title="物件字面值"></a>物件字面值</h2>]]></content>
+<h2 id="物件字面值-Object-literals"><a href="#物件字面值-Object-literals" class="headerlink" title="物件字面值 Object literals"></a>物件字面值 Object literals</h2><blockquote>
+<p>針對原大括號定義物件提供縮寫方式。</p>
+</blockquote>
+<h3 id="1-物件內的函式"><a href="#1-物件內的函式" class="headerlink" title="1.物件內的函式"></a>1.<strong>物件內的函式</strong></h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const obj=&#123;</span><br><span class="line">  myName:&quot;Winnie&quot;,</span><br><span class="line">  fn:function()&#123;</span><br><span class="line">    return this.myName;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>物件中的函式可以縮寫如下，移除 :function</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const obj = &#123;</span><br><span class="line">  myName : &quot;Winnie&quot;,</span><br><span class="line">  fn() &#123; </span><br><span class="line">    return this.myName;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-物件內的變數"><a href="#2-物件內的變數" class="headerlink" title="2.物件內的變數"></a>2.<strong>物件內的變數</strong></h3><blockquote>
+<p>輸入的屬性名稱與值為同名時，可省略屬性名稱。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const person = &#123;</span><br><span class="line">  name : &quot;Winnie&quot;</span><br><span class="line">&#125;</span><br><span class="line">const people = &#123;</span><br><span class="line">  person : person,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>物件內的變數可縮寫如下，</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const people = &#123;</span><br><span class="line">  person</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="展開"><a href="#展開" class="headerlink" title="展開"></a>展開</h2><h3 id="1-不同陣列合併"><a href="#1-不同陣列合併" class="headerlink" title="1.不同陣列合併"></a>1.<strong>不同陣列合併</strong></h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const groupStr = [&quot;a&quot;,&quot;b&quot;,&quot;c&quot;];</span><br><span class="line">const groupNum = [1,2,3,4,5];</span><br><span class="line">const groupAll = groupStr.concat(groupNum);</span><br></pre></td></tr></table></figure>
+<p>運用「…」展開手法可縮寫如下，</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const groupAll = [...groupStr,...groupNum];</span><br></pre></td></tr></table></figure>
+]]></content>
       <tags>
         <tag>JavaScript</tag>
       </tags>
