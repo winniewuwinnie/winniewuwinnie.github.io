@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Welcome.Winnie&#39;s.Blog</title>
+  <title>Winnie&#39;s.Blog</title>
   
-  <subtitle>歡迎來到 Winnie&#39;s Blog</subtitle>
+  <subtitle>Welcome.Winnie&#39;s.Blog</subtitle>
   <link href="https://winniewuwinnie.github.io/atom.xml" rel="self"/>
   
   <link href="https://winniewuwinnie.github.io/"/>
