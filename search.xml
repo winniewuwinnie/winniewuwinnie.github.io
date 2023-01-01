@@ -64,12 +64,10 @@
     <content><![CDATA[<p>關注點分離是目前主流框架都會帶入的概念，<strong>框架會較為專注在資料處理上，而畫面會透過框架的方式進行渲染</strong>，關於這部分與 this 的運作也有很大的關係。</p>
 <span id="more"></span>
 <h2 id="常見的原始作法"><a href="#常見的原始作法" class="headerlink" title="常見的原始作法"></a>常見的原始作法</h2><p><img src="https://i.imgur.com/b7jDJjE.png" alt="Image"><br>註：紅框為畫面，綠框為輸入欄位</p>
-<h2 id="關注點分離作法"><a href="#關注點分離作法" class="headerlink" title="關注點分離作法"></a>關注點分離作法</h2><p><img src="https://i.imgur.com/6iyUD1c.png" alt="Image"><br>註：紅框為畫面，綠框為輸入欄位，藍框為資料集<br>優點：對於開發者在開發時不會把畫面的程式碼跟操作或是資料的程式碼混在一起，資料與畫面是拆分開的，管理上較為便利。</p>
-<hr>
-<p>學習來源：<a href="https://courses.hexschool.com/courses/enrolled/1326387">六角學院–Vue 3 實戰影音課程</a></p>
+<h2 id="關注點分離作法"><a href="#關注點分離作法" class="headerlink" title="關注點分離作法"></a>關注點分離作法</h2><h2 id="註：紅框為畫面，綠框為輸入欄位，藍框為資料集-優點：對於開發者在開發時不會把畫面的程式碼跟操作或是資料的程式碼混在一起，資料與畫面是拆分開的，管理上較為便利。-概念：-gt-畫面－HTML-gt-資料－JS-data-gt-方法－JS-function（協助畫面與資料溝通之間的橋樑）以物件方式建立元件"><a href="#註：紅框為畫面，綠框為輸入欄位，藍框為資料集-優點：對於開發者在開發時不會把畫面的程式碼跟操作或是資料的程式碼混在一起，資料與畫面是拆分開的，管理上較為便利。-概念：-gt-畫面－HTML-gt-資料－JS-data-gt-方法－JS-function（協助畫面與資料溝通之間的橋樑）以物件方式建立元件" class="headerlink" title="註：紅框為畫面，綠框為輸入欄位，藍框為資料集* 優點：對於開發者在開發時不會把畫面的程式碼跟操作或是資料的程式碼混在一起，資料與畫面是拆分開的，管理上較為便利。* 概念：&gt; 畫面－HTML&gt; 資料－JS data &gt; 方法－JS function（協助畫面與資料溝通之間的橋樑）以物件方式建立元件"></a><img src="https://i.imgur.com/6iyUD1c.png" alt="Image"><br>註：紅框為畫面，綠框為輸入欄位，藍框為資料集<br>* 優點：對於開發者在開發時不會把畫面的程式碼跟操作或是資料的程式碼混在一起，資料與畫面是拆分開的，管理上較為便利。<br>* 概念：<br>&gt; 畫面－HTML</br><br>&gt; 資料－JS data </br><br>&gt; 方法－JS function（協助畫面與資料溝通之間的橋樑）</br><br>以<strong>物件</strong>方式建立元件</h2><p>學習來源：<a href="https://courses.hexschool.com/courses/enrolled/1326387">六角學院–Vue 3 實戰影音課程</a></p>
 ]]></content>
       <categories>
-        <category>框架</category>
+        <category>前端</category>
       </categories>
       <tags>
         <tag>Vue</tag>
