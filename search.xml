@@ -14,9 +14,9 @@
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><span id="more"></span>
 <h2 id="ES6-語法糖與新增語法"><a href="#ES6-語法糖與新增語法" class="headerlink" title="ES6 語法糖與新增語法"></a>ES6 語法糖與新增語法</h2><ul>
 <li><strong>語法糖</strong>：即為<strong>縮寫</strong>，寫法更為簡潔，但不影響運作。</li>
-<li><strong>新增語法</strong>：寫法簡潔，但會影響作。</li>
+<li><strong>新增語法</strong>：寫法簡潔，但會影響作。<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const obj=&#123;</span><br><span class="line">  myName:&quot;Winnie&quot;,</span><br><span class="line">  fn:function()&#123;</span><br><span class="line">    return this.myName;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//物件中的函示可以縮寫如下</span><br><span class="line">const obj=&#123;</span><br><span class="line">  myName:&quot;Winnie&quot;,</span><br><span class="line">  fn()&#123;</span><br><span class="line">    return this.myName;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
-]]></content>
+<h2 id="物件字面值"><a href="#物件字面值" class="headerlink" title="物件字面值"></a>物件字面值</h2>]]></content>
       <tags>
         <tag>JavaScript</tag>
       </tags>
