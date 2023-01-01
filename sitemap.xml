@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://winniewuwinnie.github.io/2023/01/01/JS%E5%B8%B8%E8%A6%8B%E7%B8%AE%E5%AF%AB/</loc>
+    
+    <lastmod>2023-01-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://winniewuwinnie.github.io/about/index.html</loc>
     
     <lastmod>2022-12-31</lastmod>
@@ -40,11 +49,18 @@
 
   <url>
     <loc>https://winniewuwinnie.github.io/</loc>
-    <lastmod>2022-12-31</lastmod>
+    <lastmod>2023-01-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
+  
+  <url>
+    <loc>https://winniewuwinnie.github.io/tags/JavaScript/</loc>
+    <lastmod>2023-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 
   

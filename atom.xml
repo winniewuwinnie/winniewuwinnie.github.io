@@ -6,7 +6,7 @@
   <link href="https://winniewuwinnie.github.io/atom.xml" rel="self"/>
   
   <link href="https://winniewuwinnie.github.io/"/>
-  <updated>2022-12-31T09:44:54.929Z</updated>
+  <updated>2023-01-01T06:49:25.661Z</updated>
   <id>https://winniewuwinnie.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS常見縮寫</title>
+    <link href="https://winniewuwinnie.github.io/2023/01/01/JS%E5%B8%B8%E8%A6%8B%E7%B8%AE%E5%AF%AB/"/>
+    <id>https://winniewuwinnie.github.io/2023/01/01/JS%E5%B8%B8%E8%A6%8B%E7%B8%AE%E5%AF%AB/</id>
+    <published>2023-01-01T06:42:59.000Z</published>
+    <updated>2023-01-01T06:49:25.661Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><span id="more"></span><h2 id="ES6-語法糖與新增語法"><a href="#ES6-語法糖與新增語法" class="headerlink" title="ES6 語法糖與新增語法"></a>ES6 語法糖與新增語法</h2><ul><li><strong>語法糖</strong>：即為<strong>縮寫</strong>，寫法更為簡潔，但不影響運作。</li><li><strong>新增語法</strong>：寫法簡潔，但會影響作。</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;</summary>
+    
+    
+    
+    
+    <category term="JavaScript" scheme="https://winniewuwinnie.github.io/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>我的第一篇部落格文章</title>
