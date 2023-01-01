@@ -6,7 +6,7 @@
   <link href="https://winniewuwinnie.github.io/atom.xml" rel="self"/>
   
   <link href="https://winniewuwinnie.github.io/"/>
-  <updated>2023-01-01T10:28:49.086Z</updated>
+  <updated>2023-01-01T14:43:21.665Z</updated>
   <id>https://winniewuwinnie.github.io/</id>
   
   <author>
@@ -21,12 +21,12 @@
     <link href="https://winniewuwinnie.github.io/2023/01/01/%E9%97%9C%E6%B3%A8%E9%BB%9E%E5%88%86%E9%9B%A2/"/>
     <id>https://winniewuwinnie.github.io/2023/01/01/%E9%97%9C%E6%B3%A8%E9%BB%9E%E5%88%86%E9%9B%A2/</id>
     <published>2023-01-01T10:19:16.000Z</published>
-    <updated>2023-01-01T10:28:49.086Z</updated>
+    <updated>2023-01-01T14:43:21.665Z</updated>
     
-    <content type="html"><![CDATA[<p>關注點分離是目前主流框架都會帶入的概念</p><span id="more"></span>]]></content>
+    <content type="html"><![CDATA[<p>關注點分離是目前主流框架都會帶入的概念，<strong>框架會較為專注在資料處理上，而畫面會透過框架的方式進行渲染</strong>，關於這部分與 this 的運作也有很大的關係。</p><span id="more"></span><h2 id="常見的原始作法"><a href="#常見的原始作法" class="headerlink" title="常見的原始作法"></a>常見的原始作法</h2><p><img src="https://i.imgur.com/b7jDJjE.png" alt="Image"><br>註：紅框為畫面，綠框為輸入欄位</p><h2 id="關注點分離作法"><a href="#關注點分離作法" class="headerlink" title="關注點分離作法"></a>關注點分離作法</h2><p><img src="https://i.imgur.com/6iyUD1c.png" alt="Image"><br>註：紅框為畫面，綠框為輸入欄位，藍框為資料集<br>優點：對於開發者在開發時不會把畫面的程式碼跟操作或是資料的程式碼混在一起，資料與畫面是拆分開的，管理上較為便利。</p><hr><p>學習來源：<a href="https://courses.hexschool.com/courses/enrolled/1326387">六角學院–Vue 3 實戰影音課程</a></p>]]></content>
     
     
-    <summary type="html">&lt;p&gt;關注點分離是目前主流框架都會帶入的概念&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;關注點分離是目前主流框架都會帶入的概念，&lt;strong&gt;框架會較為專注在資料處理上，而畫面會透過框架的方式進行渲染&lt;/strong&gt;，關於這部分與 this 的運作也有很大的關係。&lt;/p&gt;</summary>
     
     
     
