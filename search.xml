@@ -20,20 +20,36 @@
 <p>針對原大括號定義物件提供縮寫方式。</p>
 </blockquote>
 <h3 id="1-物件內的函式"><a href="#1-物件內的函式" class="headerlink" title="1.物件內的函式"></a>1.<strong>物件內的函式</strong></h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const obj=&#123;</span><br><span class="line">  myName:&quot;Winnie&quot;,</span><br><span class="line">  fn:function()&#123;</span><br><span class="line">    return this.myName;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>物件中的函式可以縮寫如下，移除 :function</p>
+<p>物件中的函式可以縮寫如下，<strong>移除 :function</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const obj = &#123;</span><br><span class="line">  myName : &quot;Winnie&quot;,</span><br><span class="line">  fn() &#123; </span><br><span class="line">    return this.myName;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="2-物件內的變數"><a href="#2-物件內的變數" class="headerlink" title="2.物件內的變數"></a>2.<strong>物件內的變數</strong></h3><blockquote>
-<p>輸入的屬性名稱與值為同名時，可省略屬性名稱。</p>
+<p><strong>輸入的屬性名稱與值為同名時，可省略屬性名稱。</strong></p>
 </blockquote>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const person = &#123;</span><br><span class="line">  name : &quot;Winnie&quot;</span><br><span class="line">&#125;</span><br><span class="line">const people = &#123;</span><br><span class="line">  person : person,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>物件內的變數可縮寫如下，</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const people = &#123;</span><br><span class="line">  person</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="展開"><a href="#展開" class="headerlink" title="展開"></a>展開</h2><h3 id="1-不同陣列合併"><a href="#1-不同陣列合併" class="headerlink" title="1.不同陣列合併"></a>1.<strong>不同陣列合併</strong></h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const groupStr = [&quot;a&quot;,&quot;b&quot;,&quot;c&quot;];</span><br><span class="line">const groupNum = [1,2,3,4,5];</span><br><span class="line">const groupAll = groupStr.concat(groupNum);</span><br></pre></td></tr></table></figure>
-<p>運用「…」展開手法可縮寫如下，</p>
+<p><strong>運用「…」展開</strong>手法可縮寫如下，</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const groupAll = [...groupStr,...groupNum];</span><br></pre></td></tr></table></figure>
-]]></content>
+
+<p>2.<strong>物件擴展</strong></p>
+<blockquote>
+<p>新增一個物件包含新方法，同時加入原有的舊方法。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const methods = &#123;</span><br><span class="line">  fn1() &#123;</span><br><span class="line">    console.log(&quot;方法一&quot;);</span><br><span class="line">  &#125;,</span><br><span class="line">  fn2() &#123;</span><br><span class="line">    console.log(&quot;方法二&quot;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">const newMethod = &#123;</span><br><span class="line">  fn()&#123;</span><br><span class="line">    console.log(&quot;新方法&quot;);</span><br><span class="line">  &#125;,</span><br><span class="line">  ...methods</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>3.<strong>轉成純陣列</strong></p>
+<blockquote>
+<p>將類陣列轉換回純陣列，即可取得完整的陣列方法。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const list = document.querySelectorAll(&quot;li&quot;);</span><br><span class="line">//此處的 list 為「類陣列」</span><br><span class="line">const newList =　[...list];</span><br></pre></td></tr></table></figure>
+
+<p>4.<strong>預設值</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function sum(a,b) &#123;</span><br><span class="line">  return a+b;</span><br><span class="line">&#125;</span><br><span class="line">console.log(sum(1,2)) //3</span><br><span class="line">console.log(sum(1)) //NaN，因為b不存在</span><br></pre></td></tr></table></figure>
+<p>使用預設值手法修改如下，若 b 有傳入數值，則使用該數值；若 b 無傳入數值，則使用預設值0。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function sum(a,b=0) &#123;</span><br><span class="line">  return a+b;</span><br><span class="line">&#125;</span><br><span class="line">console.log(sum(1,2)) //3</span><br><span class="line">console.log(sum(1)) //2</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>JavaScript</tag>
       </tags>
