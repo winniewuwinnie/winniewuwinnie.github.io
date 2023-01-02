@@ -20,23 +20,22 @@
     var CONFIG = {"hostname":"winniewuwinnie.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="關注點分離是目前主流框架都會帶入的概念，框架會較為專注在資料處理上，而畫面會透過框架的方式進行渲染，關於這部分與 this 的運作也有很大的關係。">
+  <meta name="description" content="ES Module 就是 JavaScript 的模組化，可以將檔案進行拆分來匯出、匯入，過去必須透過工具來編譯，但近幾年瀏覽器已開始支援原生的模組功能。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="關注點分離">
-<meta property="og:url" content="https://winniewuwinnie.github.io/2023/01/01/%E9%97%9C%E6%B3%A8%E9%BB%9E%E5%88%86%E9%9B%A2/index.html">
+<meta property="og:title" content="ES Module">
+<meta property="og:url" content="https://winniewuwinnie.github.io/2023/01/02/ES%20Module/index.html">
 <meta property="og:site_name" content="Winnie&#39;s.Blog">
-<meta property="og:description" content="關注點分離是目前主流框架都會帶入的概念，框架會較為專注在資料處理上，而畫面會透過框架的方式進行渲染，關於這部分與 this 的運作也有很大的關係。">
+<meta property="og:description" content="ES Module 就是 JavaScript 的模組化，可以將檔案進行拆分來匯出、匯入，過去必須透過工具來編譯，但近幾年瀏覽器已開始支援原生的模組功能。">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://i.imgur.com/b7jDJjE.png">
-<meta property="og:image" content="https://i.imgur.com/6iyUD1c.png">
-<meta property="article:published_time" content="2023-01-01T10:19:16.000Z">
-<meta property="article:modified_time" content="2023-01-01T16:20:28.267Z">
+<meta property="og:image" content="https://i.imgur.com/ZL2TJFJ.png">
+<meta property="article:published_time" content="2023-01-02T07:52:38.000Z">
+<meta property="article:modified_time" content="2023-01-02T10:06:46.882Z">
 <meta property="article:author" content="Winnie">
 <meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.imgur.com/b7jDJjE.png">
+<meta name="twitter:image" content="https://i.imgur.com/ZL2TJFJ.png">
 
-<link rel="canonical" href="https://winniewuwinnie.github.io/2023/01/01/%E9%97%9C%E6%B3%A8%E9%BB%9E%E5%88%86%E9%9B%A2/">
+<link rel="canonical" href="https://winniewuwinnie.github.io/2023/01/02/ES%20Module/">
 
 
 <script id="page-configurations">
@@ -49,7 +48,7 @@
   };
 </script>
 
-  <title>關注點分離 | Winnie's.Blog</title>
+  <title>ES Module | Winnie's.Blog</title>
   
 
 
@@ -199,7 +198,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://winniewuwinnie.github.io/2023/01/01/%E9%97%9C%E6%B3%A8%E9%BB%9E%E5%88%86%E9%9B%A2/">
+    <link itemprop="mainEntityOfPage" href="https://winniewuwinnie.github.io/2023/01/02/ES%20Module/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://i.imgur.com/J15tnD5.png">
@@ -212,7 +211,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          關注點分離
+          ES Module
         </h1>
 
         <div class="post-meta">
@@ -221,16 +220,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
+              
 
-              <time title="創建時間：2023-01-01 18:19:16" itemprop="dateCreated datePublished" datetime="2023-01-01T18:19:16+08:00">2023-01-01</time>
+              <time title="創建時間：2023-01-02 15:52:38 / 修改時間：18:06:46" itemprop="dateCreated datePublished" datetime="2023-01-02T15:52:38+08:00">2023-01-02</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2023-01-02 00:20:28" itemprop="dateModified" datetime="2023-01-02T00:20:28+08:00">2023-01-02</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -250,12 +243,13 @@
       </span>
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2023/01/01/%E9%97%9C%E6%B3%A8%E9%BB%9E%E5%88%86%E9%9B%A2/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2023/01/01/關注點分離/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2023/01/02/ES%20Module/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2023/01/02/ES Module/" itemprop="commentCount"></span>
     </a>
   </span>
   
   
+            <div class="post-description">ES Module 就是 JavaScript 的模組化，可以將檔案進行拆分來匯出、匯入，過去必須透過工具來編譯，但近幾年瀏覽器已開始支援原生的模組功能。</div>
 
         </div>
       </header>
@@ -266,22 +260,34 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>關注點分離是目前主流框架都會帶入的概念，<strong>框架會較為專注在資料處理上，而畫面會透過框架的方式進行渲染</strong>，關於這部分與 this 的運作也有很大的關係。</p>
-<span id="more"></span>
-<h2 id="常見的原始作法"><a href="#常見的原始作法" class="headerlink" title="常見的原始作法"></a>常見的原始作法</h2><p><img src="https://i.imgur.com/b7jDJjE.png" alt="Image"><br>註：紅框為畫面，綠框為輸入欄位</p>
-<h2 id="關注點分離作法"><a href="#關注點分離作法" class="headerlink" title="關注點分離作法"></a>關注點分離作法</h2><p><img src="https://i.imgur.com/6iyUD1c.png" alt="Image"><br>註：紅框為畫面，綠框為輸入欄位，藍框為資料集</p>
-<h3 id="優點："><a href="#優點：" class="headerlink" title="優點："></a>優點：</h3><p>對於開發者在開發時不會把畫面的程式碼跟操作或是資料的程式碼混在一起，資料與畫面是拆分開的，管理上較為便利。</p>
-<h3 id="概念："><a href="#概念：" class="headerlink" title="概念："></a>概念：</h3><ul>
-<li><strong>畫面－HTML</strong></li>
-<li><strong>資料－JS data</strong></li>
-<li><strong>方法－JS function</strong>（協助畫面與資料溝通之間的橋樑）</li>
+        <h2 id="在瀏覽器上運行-ES-模組"><a href="#在瀏覽器上運行-ES-模組" class="headerlink" title="在瀏覽器上運行 ES 模組"></a>在瀏覽器上運行 ES 模組</h2><blockquote>
+<p>1.將標籤定義 <code>&lt;script type=&quot;module&quot;&gt;</code>，才可進行程式碼的匯入及匯出。<br>2.每一個 <code>&lt;script type=&quot;module&quot;&gt;&lt;/script&gt;</code> 區塊的作用域都是獨立的。<br>3.網路上找到的 “ESM”，如果條件允許是可以使用 import 方式載入。</p>
+</blockquote>
+<h3 id="匯出匯入觀念"><a href="#匯出匯入觀念" class="headerlink" title="匯出匯入觀念"></a>匯出匯入觀念</h3><p><img src="https://i.imgur.com/ZL2TJFJ.png" alt="Image"></p>
+<h4 id="匯出-JS"><a href="#匯出-JS" class="headerlink" title="匯出- JS"></a>匯出- JS</h4><ul>
+<li><strong>預設匯出</strong>：每個檔案只有一個 default。<blockquote>
+<p>常見的匯出方式，通常用於匯出物件，在 Vue 開發中可用來匯出元件<br>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> 值</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+</li>
+<li><strong>具名匯出</strong>：每個檔案可以有多個。<blockquote>
+<p>可用於匯出已定義的變數、物件、函式，專案開發中通常用於「方法匯出」，第三方的框架、函式、套件很常使用具名定義「方法」。<br>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params"></span>) &#123;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;匯出函式&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+</li>
 </ul>
-<h4 id="以物件方式建立元件，元件結構如下，"><a href="#以物件方式建立元件，元件結構如下，" class="headerlink" title="以物件方式建立元件，元件結構如下，"></a>以<strong>物件</strong>方式建立元件，元件結構如下，</h4><ul>
-<li><strong>資料</strong></li>
-<li><strong>方法、觸發器</strong></li>
-<li><strong>生命週期（初始化）</strong>：進入畫面第一次會被觸發的方法  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">const</span> component = &#123;</span><br><span class="line">  <span class="comment">//資料</span></span><br><span class="line">  <span class="attr">data</span>: [<span class="string">&quot;待辦事項一&quot;</span>, <span class="string">&quot;待辦事項二&quot;</span>, <span class="string">&quot;待辦事項三&quot;</span>],</span><br><span class="line">  <span class="comment">//事件觸發</span></span><br><span class="line">  <span class="title function_">removeData</span>(<span class="params">id</span>) &#123;</span><br><span class="line">    <span class="comment">// console.log(this);</span></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">data</span>.<span class="title function_">splice</span>(id, <span class="number">1</span>);</span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">render</span>();</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">//渲染方法(Vue.js會處理這部分)</span></span><br><span class="line">  <span class="title function_">render</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> list = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;ul&quot;</span>);</span><br><span class="line">    <span class="keyword">let</span> str = <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">data</span>.<span class="title function_">forEach</span>(<span class="keyword">function</span> (<span class="params">item, index</span>) &#123;</span><br><span class="line">      str += <span class="string">`&lt;li&gt;<span class="subst">$&#123;item&#125;</span>&lt;button type=&quot;button&quot; class=&quot;btn&quot; data-id=&quot;<span class="subst">$&#123;index&#125;</span>&quot;&gt;刪除&lt;/button&gt;&lt;/li&gt;`</span>;</span><br><span class="line">    &#125;);</span><br><span class="line">    list.<span class="property">innerHTML</span> = str;</span><br><span class="line">    <span class="keyword">const</span> btns = <span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">&quot;.btn&quot;</span>);</span><br><span class="line">    btns.<span class="title function_">forEach</span>(<span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</span><br><span class="line">      item.<span class="title function_">addEventListener</span>(<span class="string">&quot;click&quot;</span>, <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// console.log(this);//使用箭頭函式讓 this 指向 component</span></span><br><span class="line">        <span class="comment">// 重點，移除項目是先移除資料，而不是直接移除 DOM</span></span><br><span class="line">        <span class="variable language_">this</span>.<span class="title function_">removeData</span>(e.<span class="property">target</span>.<span class="property">dataset</span>.<span class="property">id</span>);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">//生命週期</span></span><br><span class="line">  <span class="title function_">init</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">render</span>();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">component.<span class="title function_">init</span>();</span><br></pre></td></tr></table></figure>
-  <a target="_blank" rel="noopener" href="https://codepen.io/WinnieWuWinnie/pen/eYjzzEN?editors=0011">Codepen</a></li>
+<h4 id="匯入-HTML、JS"><a href="#匯入-HTML、JS" class="headerlink" title="匯入- HTML、JS"></a>匯入- HTML、JS</h4><ul>
+<li><strong>預設匯入</strong>：  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> 自訂名稱 <span class="keyword">from</span> <span class="string">&quot;檔名.js&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li><strong>具名匯入</strong>：<ul>
+<li><strong>單一匯入（建議寫法）</strong>：<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; 具名名稱 &#125; <span class="keyword">from</span> <span class="string">&quot;檔名.js&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li>全部匯入（不建議寫法，錯誤較難發現）：<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//全部匯出可能會造成名稱上的衝突，所以使用 as 賦予到一個物件名稱上</span></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> 物件名稱 <span class="keyword">from</span> <span class="string">&quot;檔名.js&quot;</span></span><br></pre></td></tr></table></figure></li>
 </ul>
+</li>
+</ul>
+<h3 id="sideEffect"><a href="#sideEffect" class="headerlink" title="sideEffect"></a>sideEffect</h3><blockquote>
+<p>不須進行匯出，但可直接匯入，且匯入後可直接執行。常見案例如：jQuery</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 檔名 sideEffect.js</span></span><br><span class="line">(<span class="keyword">function</span> (<span class="params"><span class="variable language_">global</span></span>) &#123;</span><br><span class="line">  <span class="variable language_">global</span>.<span class="property">$</span> = <span class="string">&#x27;我是 jQuery&#x27;</span>;</span><br><span class="line">&#125;)(<span class="variable language_">window</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&quot;./sideEffect.js&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>($) <span class="comment">//我是 jQuery </span></span><br></pre></td></tr></table></figure>
+
 <hr>
 <p>學習來源：<a target="_blank" rel="noopener" href="https://courses.hexschool.com/courses/enrolled/1326387">六角學院–Vue 3 實戰影音課程</a></p>
 
@@ -302,13 +308,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2023/01/01/JS%E5%B8%B8%E8%A6%8B%E7%B8%AE%E5%AF%AB/" rel="prev" title="JS 常見縮寫">
-      <i class="fa fa-chevron-left"></i> JS 常見縮寫
+    <a href="/2023/01/01/%E9%97%9C%E6%B3%A8%E9%BB%9E%E5%88%86%E9%9B%A2/" rel="prev" title="關注點分離">
+      <i class="fa fa-chevron-left"></i> 關注點分離
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2023/01/02/ES%20Module/" rel="next" title="ES Module">
-      ES Module <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -374,7 +377,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A6%8B%E7%9A%84%E5%8E%9F%E5%A7%8B%E4%BD%9C%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">常見的原始作法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%9C%E6%B3%A8%E9%BB%9E%E5%88%86%E9%9B%A2%E4%BD%9C%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">關注點分離作法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%84%AA%E9%BB%9E%EF%BC%9A"><span class="nav-number">2.1.</span> <span class="nav-text">優點：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5%EF%BC%9A"><span class="nav-number">2.2.</span> <span class="nav-text">概念：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A5%E7%89%A9%E4%BB%B6%E6%96%B9%E5%BC%8F%E5%BB%BA%E7%AB%8B%E5%85%83%E4%BB%B6%EF%BC%8C%E5%85%83%E4%BB%B6%E7%B5%90%E6%A7%8B%E5%A6%82%E4%B8%8B%EF%BC%8C"><span class="nav-number">2.2.1.</span> <span class="nav-text">以物件方式建立元件，元件結構如下，</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8%E7%80%8F%E8%A6%BD%E5%99%A8%E4%B8%8A%E9%81%8B%E8%A1%8C-ES-%E6%A8%A1%E7%B5%84"><span class="nav-number">1.</span> <span class="nav-text">在瀏覽器上運行 ES 模組</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%AF%E5%87%BA%E5%8C%AF%E5%85%A5%E8%A7%80%E5%BF%B5"><span class="nav-number">1.1.</span> <span class="nav-text">匯出匯入觀念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8C%AF%E5%87%BA-JS"><span class="nav-number">1.1.1.</span> <span class="nav-text">匯出- JS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8C%AF%E5%85%A5-HTML%E3%80%81JS"><span class="nav-number">1.1.2.</span> <span class="nav-text">匯入- HTML、JS</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sideEffect"><span class="nav-number">1.2.</span> <span class="nav-text">sideEffect</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -507,9 +510,9 @@
 </script>
 <script>
   var disqus_config = function() {
-    this.page.url = "https://winniewuwinnie.github.io/2023/01/01/%E9%97%9C%E6%B3%A8%E9%BB%9E%E5%88%86%E9%9B%A2/";
-    this.page.identifier = "2023/01/01/關注點分離/";
-    this.page.title = "關注點分離";
+    this.page.url = "https://winniewuwinnie.github.io/2023/01/02/ES%20Module/";
+    this.page.identifier = "2023/01/02/ES Module/";
+    this.page.title = "ES Module";
     };
   NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
     if (window.DISQUS) {

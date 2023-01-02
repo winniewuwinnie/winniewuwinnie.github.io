@@ -87,4 +87,45 @@
         <tag>JavaScript</tag>
       </tags>
   </entry>
+  <entry>
+    <title>ES Module</title>
+    <url>/2023/01/02/ES%20Module/</url>
+    <content><![CDATA[<h2 id="在瀏覽器上運行-ES-模組"><a href="#在瀏覽器上運行-ES-模組" class="headerlink" title="在瀏覽器上運行 ES 模組"></a>在瀏覽器上運行 ES 模組</h2><blockquote>
+<p>1.將標籤定義 <code>&lt;script type=&quot;module&quot;&gt;</code>，才可進行程式碼的匯入及匯出。<br>2.每一個 <code>&lt;script type=&quot;module&quot;&gt;&lt;/script&gt;</code> 區塊的作用域都是獨立的。<br>3.網路上找到的 “ESM”，如果條件允許是可以使用 import 方式載入。</p>
+</blockquote>
+<h3 id="匯出匯入觀念"><a href="#匯出匯入觀念" class="headerlink" title="匯出匯入觀念"></a>匯出匯入觀念</h3><p><img src="https://i.imgur.com/ZL2TJFJ.png" alt="Image"></p>
+<h4 id="匯出-JS"><a href="#匯出-JS" class="headerlink" title="匯出- JS"></a>匯出- JS</h4><ul>
+<li><strong>預設匯出</strong>：每個檔案只有一個 default。<blockquote>
+<p>常見的匯出方式，通常用於匯出物件，在 Vue 開發中可用來匯出元件<br>  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> 值</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+</li>
+<li><strong>具名匯出</strong>：每個檔案可以有多個。<blockquote>
+<p>可用於匯出已定義的變數、物件、函式，專案開發中通常用於「方法匯出」，第三方的框架、函式、套件很常使用具名定義「方法」。<br>  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params"></span>) &#123;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;匯出函式&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+</li>
+</ul>
+<h4 id="匯入-HTML、JS"><a href="#匯入-HTML、JS" class="headerlink" title="匯入- HTML、JS"></a>匯入- HTML、JS</h4><ul>
+<li><strong>預設匯入</strong>：  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> 自訂名稱 <span class="keyword">from</span> <span class="string">&quot;檔名.js&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li><strong>具名匯入</strong>：<ul>
+<li><strong>單一匯入（建議寫法）</strong>：<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; 具名名稱 &#125; <span class="keyword">from</span> <span class="string">&quot;檔名.js&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li>全部匯入（不建議寫法，錯誤較難發現）：<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//全部匯出可能會造成名稱上的衝突，所以使用 as 賦予到一個物件名稱上</span></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> 物件名稱 <span class="keyword">from</span> <span class="string">&quot;檔名.js&quot;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h3 id="sideEffect"><a href="#sideEffect" class="headerlink" title="sideEffect"></a>sideEffect</h3><blockquote>
+<p>不須進行匯出，但可直接匯入，且匯入後可直接執行。常見案例如：jQuery</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 檔名 sideEffect.js</span></span><br><span class="line">(<span class="keyword">function</span> (<span class="params"><span class="variable language_">global</span></span>) &#123;</span><br><span class="line">  <span class="variable language_">global</span>.<span class="property">$</span> = <span class="string">&#x27;我是 jQuery&#x27;</span>;</span><br><span class="line">&#125;)(<span class="variable language_">window</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&quot;./sideEffect.js&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>($) <span class="comment">//我是 jQuery </span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>學習來源：<a href="https://courses.hexschool.com/courses/enrolled/1326387">六角學院–Vue 3 實戰影音課程</a></p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
 </search>
