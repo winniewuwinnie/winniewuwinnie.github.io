@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>我的第一篇部落格文章</title>
-    <url>/2022/12/31/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E9%83%A8%E8%90%BD%E6%A0%BC%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<p>這是一段文字</p>
-<span id="more"></span>
-<p><img src="https://i.imgur.com/edZHCg9.png" alt="Image"></p>
-]]></content>
-  </entry>
-  <entry>
     <title>JS 常見縮寫</title>
     <url>/2023/01/01/JS%E5%B8%B8%E8%A6%8B%E7%B8%AE%E5%AF%AB/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><span id="more"></span>
-<h2 id="ES6-語法糖與新增語法"><a href="#ES6-語法糖與新增語法" class="headerlink" title="ES6 語法糖與新增語法"></a>ES6 語法糖與新增語法</h2><ul>
+    <content><![CDATA[<h2 id="ES6-語法糖與新增語法"><a href="#ES6-語法糖與新增語法" class="headerlink" title="ES6 語法糖與新增語法"></a>ES6 語法糖與新增語法</h2><ul>
 <li><strong>語法糖</strong>：即為<strong>縮寫</strong>，寫法更為簡潔，但不影響運作。</li>
-<li><strong>新增語法</strong>：寫法簡潔，但會影響作。 ex.箭頭函式</li>
+<li><strong>新增語法</strong>：寫法簡潔，但會影響作。 ex.箭頭函式<span id="more"></span></li>
 </ul>
 <h2 id="物件字面值-Object-literals"><a href="#物件字面值-Object-literals" class="headerlink" title="物件字面值 Object literals"></a>物件字面值 Object literals</h2><blockquote>
 <p>針對原大括號定義物件提供縮寫方式。</p>
