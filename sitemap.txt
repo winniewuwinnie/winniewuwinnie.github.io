@@ -1,3 +1,4 @@
+https://winniewuwinnie.github.io/2023/01/03/Richest%20Customer%20Wealth%20-%20LeetCode/
 https://winniewuwinnie.github.io/2023/01/01/JS%E5%B8%B8%E8%A6%8B%E7%B8%AE%E5%AF%AB/
 https://winniewuwinnie.github.io/2023/01/02/ES%20Module/
 https://winniewuwinnie.github.io/2023/01/01/%E9%97%9C%E6%B3%A8%E9%BB%9E%E5%88%86%E9%9B%A2/
@@ -8,4 +9,5 @@ https://winniewuwinnie.github.io/google76f8365a8788489b.html
 https://winniewuwinnie.github.io/404.html
 https://winniewuwinnie.github.io/
 https://winniewuwinnie.github.io/tags/JavaScript/
+https://winniewuwinnie.github.io/tags/LeetCode/
 https://winniewuwinnie.github.io/categories/%E5%89%8D%E7%AB%AF/
