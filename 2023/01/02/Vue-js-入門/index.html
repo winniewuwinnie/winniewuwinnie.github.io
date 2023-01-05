@@ -43,7 +43,7 @@
 <meta property="og:image" content="https://i.imgur.com/Akhos16.png">
 <meta property="og:image" content="https://i.imgur.com/Wi5HAfd.png">
 <meta property="article:published_time" content="2023-01-02T13:00:14.000Z">
-<meta property="article:modified_time" content="2023-01-05T15:24:47.590Z">
+<meta property="article:modified_time" content="2023-01-05T15:26:16.558Z">
 <meta property="article:author" content="Winnie">
 <meta property="article:tag" content="Vue">
 <meta name="twitter:card" content="summary">
@@ -246,7 +246,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2023-01-05 23:24:47" itemprop="dateModified" datetime="2023-01-05T23:24:47+08:00">2023-01-05</time>
+                <time title="修改時間：2023-01-05 23:26:16" itemprop="dateModified" datetime="2023-01-05T23:26:16+08:00">2023-01-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -279,9 +279,7 @@
 <p>原有的關注點分離是透過一個方法將資料渲染到畫面上，而 Vue 透過 MVVM 概念來處理關注點分離。</p>
 </blockquote>
 <p><img src="https://i.imgur.com/indnIKS.png" alt="Image"><br>圖片說明：MVVM 由 <strong>View 畫面、ViewModel 資料繫結器、Model 資料狀態</strong>三部分來組成，當 Model 有任何資料的改變，ViewModel 會自動把資料綁定，渲染到 View畫面上。<strong>View 與 Model 使用 viewModel 達到雙向綁定</strong>。</p>
-<blockquote>
-<p>雙向綁定<br>Model → View：透過數據綁定，將資料狀態傳遞的數據轉化成所看到的頁面。<br>View → Model：透過 DOM 監聽事件，將所看到的頁面轉化成資料狀態。</p>
-</blockquote>
+<h4 id="雙向綁定"><a href="#雙向綁定" class="headerlink" title="雙向綁定"></a>雙向綁定</h4><p>Model → View：透過數據綁定，將資料狀態傳遞的數據轉化成所看到的頁面。<br>View → Model：透過 DOM 監聽事件，將所看到的頁面轉化成資料狀態。</p>
 <p>這邊的關注點分離就是將處理 View （畫面）及處理 Model（資料）的部分分離，再透過 ViewModel 的機制讓兩邊的狀態同步，也就是下圖 v-model 指令，<strong>使用 v-model 將畫面及資料產生雙向綁定</strong>。</p>
 <p><img src="https://i.imgur.com/Akhos16.png" alt="Image"></p>
 <h2 id="Vue-js-起手式"><a href="#Vue-js-起手式" class="headerlink" title="Vue.js 起手式"></a>Vue.js 起手式</h2><blockquote>
@@ -381,7 +379,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%9C%E6%B3%A8%E9%BB%9E%E5%88%86%E9%9B%A2"><span class="nav-number">1.</span> <span class="nav-text">關注點分離</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MVVM-%E6%A6%82%E5%BF%B5-%EF%BC%88Model-View-ViewModel%EF%BC%89"><span class="nav-number">1.1.</span> <span class="nav-text">MVVM 概念 （Model View ViewModel）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue-js-%E8%B5%B7%E6%89%8B%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">Vue.js 起手式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A5%E9%A9%9F%E6%8B%86%E8%A7%A3"><span class="nav-number">2.1.</span> <span class="nav-text">步驟拆解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B5%90%E6%A7%8B%E8%AA%AA%E6%98%8E"><span class="nav-number">2.2.</span> <span class="nav-text">結構說明</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Proxy-%E6%A9%9F%E5%88%B6"><span class="nav-number">2.2.1.</span> <span class="nav-text">Proxy 機制</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E9%97%9C-Codepen"><span class="nav-number">2.3.</span> <span class="nav-text">相關 Codepen</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%9C%E6%B3%A8%E9%BB%9E%E5%88%86%E9%9B%A2"><span class="nav-number">1.</span> <span class="nav-text">關注點分離</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MVVM-%E6%A6%82%E5%BF%B5-%EF%BC%88Model-View-ViewModel%EF%BC%89"><span class="nav-number">1.1.</span> <span class="nav-text">MVVM 概念 （Model View ViewModel）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9B%99%E5%90%91%E7%B6%81%E5%AE%9A"><span class="nav-number">1.1.1.</span> <span class="nav-text">雙向綁定</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue-js-%E8%B5%B7%E6%89%8B%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">Vue.js 起手式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A5%E9%A9%9F%E6%8B%86%E8%A7%A3"><span class="nav-number">2.1.</span> <span class="nav-text">步驟拆解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B5%90%E6%A7%8B%E8%AA%AA%E6%98%8E"><span class="nav-number">2.2.</span> <span class="nav-text">結構說明</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Proxy-%E6%A9%9F%E5%88%B6"><span class="nav-number">2.2.1.</span> <span class="nav-text">Proxy 機制</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E9%97%9C-Codepen"><span class="nav-number">2.3.</span> <span class="nav-text">相關 Codepen</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
