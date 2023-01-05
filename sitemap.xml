@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://winniewuwinnie.github.io/2023/01/02/Vue-js-%E5%85%A5%E9%96%80/</loc>
+    
+    <lastmod>2023-01-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://winniewuwinnie.github.io/2023/01/05/Palindrome-Number-LeetCode/</loc>
     
     <lastmod>2023-01-05</lastmod>
@@ -102,6 +111,13 @@
   
   <url>
     <loc>https://winniewuwinnie.github.io/tags/JavaScript/</loc>
+    <lastmod>2023-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://winniewuwinnie.github.io/tags/Vue/</loc>
     <lastmod>2023-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

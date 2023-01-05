@@ -1,3 +1,4 @@
+https://winniewuwinnie.github.io/2023/01/02/Vue-js-%E5%85%A5%E9%96%80/
 https://winniewuwinnie.github.io/2023/01/05/Palindrome-Number-LeetCode/
 https://winniewuwinnie.github.io/2023/01/03/Richest%20Customer%20Wealth%20-%20LeetCode/
 https://winniewuwinnie.github.io/2023/01/01/JS%E5%B8%B8%E8%A6%8B%E7%B8%AE%E5%AF%AB/
@@ -10,5 +11,6 @@ https://winniewuwinnie.github.io/google76f8365a8788489b.html
 https://winniewuwinnie.github.io/404.html
 https://winniewuwinnie.github.io/
 https://winniewuwinnie.github.io/tags/JavaScript/
+https://winniewuwinnie.github.io/tags/Vue/
 https://winniewuwinnie.github.io/tags/LeetCode/
 https://winniewuwinnie.github.io/categories/%E5%89%8D%E7%AB%AF/

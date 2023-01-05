@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HWND5YKGMM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HWND5YKGMM');
+</script>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"winniewuwinnie.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Vue.js 入門">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue.js 入門">
+<meta property="og:url" content="https://winniewuwinnie.github.io/2023/01/02/Vue-js-%E5%85%A5%E9%96%80/index.html">
+<meta property="og:site_name" content="Winnie&#39;s.Blog">
+<meta property="og:description" content="Vue.js 入門">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://i.imgur.com/EQylf4G.png">
+<meta property="og:image" content="https://i.imgur.com/ky6Txss.png">
+<meta property="og:image" content="https://i.imgur.com/indnIKS.png">
+<meta property="og:image" content="https://i.imgur.com/Akhos16.png">
+<meta property="og:image" content="https://i.imgur.com/Wi5HAfd.png">
+<meta property="article:published_time" content="2023-01-02T13:00:14.000Z">
+<meta property="article:modified_time" content="2023-01-05T15:20:01.900Z">
+<meta property="article:author" content="Winnie">
+<meta property="article:tag" content="Vue">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.imgur.com/EQylf4G.png">
+
+<link rel="canonical" href="https://winniewuwinnie.github.io/2023/01/02/Vue-js-%E5%85%A5%E9%96%80/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>Vue.js 入門 | Winnie's.Blog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HWND5YKGMM"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HWND5YKGMM');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Winnie's.Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Winnie's.Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Welcome.Winnie's.Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://winniewuwinnie.github.io/2023/01/02/Vue-js-%E5%85%A5%E9%96%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://i.imgur.com/J15tnD5.png">
+      <meta itemprop="name" content="Winnie">
+      <meta itemprop="description" content="走在成為前端工程師路上的設計人<br/>記錄成長與生活的空間">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Winnie's.Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Vue.js 入門
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2023-01-02 21:00:14" itemprop="dateCreated datePublished" datetime="2023-01-02T21:00:14+08:00">2023-01-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2023-01-05 23:20:01" itemprop="dateModified" datetime="2023-01-05T23:20:01+08:00">2023-01-05</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+            <div class="post-description">Vue.js 入門</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="關注點分離"><a href="#關注點分離" class="headerlink" title="關注點分離"></a>關注點分離</h2><blockquote>
+<p><strong>資料是一個獨立區塊</strong>，不會混用於渲染、生命週期及事件觸發。</p>
+</blockquote>
+<p><img src="https://i.imgur.com/EQylf4G.png" alt="Image"><br>圖片說明：畫面進入時先觸發生命週期，生命週期再觸發渲染，取得資料內容渲染在畫面上。</p>
+<p><img src="https://i.imgur.com/ky6Txss.png" alt="Image"><br>圖片說明：點擊按鈕觸發事件更動資料內容，更動內容觸發後再重新渲染，取得更新後的文字渲染到畫面上。</p>
+<h3 id="MVVM-概念-（Model-View-ViewModel）"><a href="#MVVM-概念-（Model-View-ViewModel）" class="headerlink" title="MVVM 概念 （Model View ViewModel）"></a>MVVM 概念 （Model View ViewModel）</h3><blockquote>
+<p>原有的關注點分離是透過一個方法將資料渲染到畫面上，而 Vue 透過 MVVM 概念來處理關注點分離。</p>
+</blockquote>
+<p><img src="https://i.imgur.com/indnIKS.png" alt="Image"><br>圖片說明：MVVM 由 <strong>View 畫面、ViewModel 資料繫結器、Model 資料狀態</strong>三部分來組成，當 Model 有任何資料的改變，ViewModel 會自動把資料綁定，渲染到 View畫面上。<strong>View 與 Model 使用 viewModel 達到雙向綁定</strong>。</p>
+<blockquote>
+<p>雙向綁定<br>Model → View：透過數據綁定，將資料狀態傳遞的數據轉化成所看到的頁面。<br>View → Model：透過 DOM 監聽事件，將所看到的頁面轉化成資料狀態。</p>
+</blockquote>
+<p>這邊的關注點分離就是將處理 View （畫面）及處理 Model（資料）的部分分離，再透過 ViewModel 的機制讓兩邊的狀態同步，也就是下圖 v-model 指令，<strong>使用 v-model 將畫面及資料產生雙向綁定</strong>。</p>
+<p><img src="https://i.imgur.com/Akhos16.png" alt="Image"></p>
+<h2 id="Vue-js-起手式"><a href="#Vue-js-起手式" class="headerlink" title="Vue.js 起手式"></a>Vue.js 起手式</h2><blockquote>
+<p>建議安裝 Chrome 開發者工具 <a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/vuejs-devtools/ljjemllljcmogpfapbkkighbhhppjdbg">Vue.js devtools</a>，可以在瀏覽器開發人員工具上查看元件、資料狀態。</p>
+</blockquote>
+<h3 id="步驟拆解"><a href="#步驟拆解" class="headerlink" title="步驟拆解"></a>步驟拆解</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span> <span class="comment">&lt;!--step1.定義一個區塊，大部分會使用 id 來命名 --&gt;</span></span><br><span class="line">  &#123;&#123;counter&#125;&#125; <span class="comment">&lt;!--step5.使用&#123;&#123;&#125;&#125;將資料顯示於畫面上--&gt;</span></span><br><span class="line">  &#123;&#123;text&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"> <span class="comment">//step2.插入一個 script 緊鄰 step1 區塊</span></span></span><br><span class="line"><span class="language-javascript"><span class="title class_">Vue</span>.<span class="title function_">createApp</span>(&#123; <span class="comment">//step3.建立元件內容</span></span></span><br><span class="line"><span class="language-javascript">  <span class="title function_">data</span>(<span class="params"></span>)&#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">counter</span>:<span class="number">6</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">text</span>:<span class="string">&quot;這是一段話&quot;</span></span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;</span></span><br><span class="line"><span class="language-javascript">&#125;).<span class="title function_">mount</span>(<span class="string">&quot;#app&quot;</span>) <span class="comment">//step4.使用mount指定元件要掛載到哪一個區塊</span></span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="結構說明"><a href="#結構說明" class="headerlink" title="結構說明"></a>結構說明</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">&#123;&#123;counter&#125;&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-primary&quot;</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">v-on:click</span>=<span class="string">&quot;clickMe&quot;</span>&gt;</span>按鈕<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="comment">&lt;!-- 使用 v-on 來觸發 methods 中的方法 --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">const</span> app=&#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="comment">//資料（函式）</span></span></span><br><span class="line"><span class="language-javascript">    <span class="title function_">data</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">counter</span>:<span class="number">0</span></span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript">    &#125;,</span></span><br><span class="line"><span class="language-javascript">    <span class="comment">//生命週期（函式）:元件生成必經過程，有些資料在進入元件之後才進行調整的話，就可以在生命週期裡進行調整 ex.從遠端取得資料</span></span></span><br><span class="line"><span class="language-javascript">    <span class="title function_">created</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);<span class="comment">//Proxy</span></span></span><br><span class="line"><span class="language-javascript">      <span class="variable language_">this</span>.<span class="property">counter</span>=<span class="number">10</span>;</span></span><br><span class="line"><span class="language-javascript">    &#125;,</span></span><br><span class="line"><span class="language-javascript">    <span class="comment">//方法（物件）</span></span></span><br><span class="line"><span class="language-javascript">    <span class="attr">methods</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="title function_">clickMe</span>(<span class="params"></span>)&#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.<span class="property">counter</span>+=<span class="number">1</span>;</span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript">    &#125;,</span></span><br><span class="line"><span class="language-javascript">  &#125;</span></span><br><span class="line"><span class="language-javascript">  <span class="title class_">Vue</span>.<span class="title function_">createApp</span>(app).<span class="title function_">mount</span>(<span class="string">&quot;#app&quot;</span>);</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Proxy-機制"><a href="#Proxy-機制" class="headerlink" title="Proxy 機制"></a>Proxy 機制</h4><blockquote>
+<p>Proxy 機制會攔截目前所有的值，當有任何變化時就進行攔截，並且給予相對應的反應。在 Proxy 的 target 中可以看到自定義的值及 Vue 所定義的方法，因此<strong>所定義的值會自動展開在 target 物件下，所以使用 this 就可以取用到 Proxy 內的所有值。</strong></p>
+</blockquote>
+<p><img src="https://i.imgur.com/Wi5HAfd.png" alt="Image"></p>
+<h3 id="相關-Codepen"><a href="#相關-Codepen" class="headerlink" title="相關 Codepen"></a>相關 Codepen</h3><p><a target="_blank" rel="noopener" href="https://codepen.io/WinnieWuWinnie/pen/BaPzvej?editors=1011">起手是常見結構</a><br><a target="_blank" rel="noopener" href="https://codepen.io/WinnieWuWinnie/pen/LYBZqzw">將資料加入於 Vue Data</a><br><a target="_blank" rel="noopener" href="https://codepen.io/WinnieWuWinnie/pen/abjZxoW">完成新增、編輯商品項目</a></p>
+<hr>
+<p>學習來源：<br><br><a target="_blank" rel="noopener" href="https://courses.hexschool.com/courses/enrolled/1326387">六角學院–Vue 3 實戰影音課程</a><br><a target="_blank" rel="noopener" href="https://v1-cn.vuejs.org/guide/overview.html">Vue.js</a><br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10265372">Vue.js 從零開始：MVVM、漸進式框架</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Vue/" rel="tag"># Vue</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/01/02/ES%20Module/" rel="prev" title="ES Module">
+      <i class="fa fa-chevron-left"></i> ES Module
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/01/03/Richest%20Customer%20Wealth%20-%20LeetCode/" rel="next" title="Richest Customer Wealth - LeetCode">
+      Richest Customer Wealth - LeetCode <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%9C%E6%B3%A8%E9%BB%9E%E5%88%86%E9%9B%A2"><span class="nav-number">1.</span> <span class="nav-text">關注點分離</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MVVM-%E6%A6%82%E5%BF%B5-%EF%BC%88Model-View-ViewModel%EF%BC%89"><span class="nav-number">1.1.</span> <span class="nav-text">MVVM 概念 （Model View ViewModel）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue-js-%E8%B5%B7%E6%89%8B%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">Vue.js 起手式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A5%E9%A9%9F%E6%8B%86%E8%A7%A3"><span class="nav-number">2.1.</span> <span class="nav-text">步驟拆解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B5%90%E6%A7%8B%E8%AA%AA%E6%98%8E"><span class="nav-number">2.2.</span> <span class="nav-text">結構說明</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Proxy-%E6%A9%9F%E5%88%B6"><span class="nav-number">2.2.1.</span> <span class="nav-text">Proxy 機制</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E9%97%9C-Codepen"><span class="nav-number">2.3.</span> <span class="nav-text">相關 Codepen</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Winnie"
+      src="https://i.imgur.com/J15tnD5.png">
+  <p class="site-author-name" itemprop="name">Winnie</p>
+  <div class="site-description" itemprop="description">走在成為前端工程師路上的設計人<br/>記錄成長與生活的空間</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">若要轉載文章，麻煩請保留原作者名稱與原始連結。</span>
+</div>
+  <div class="addthis_inline_share_toolbox">
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=63aff002cf5008ad" async="async"></script>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
