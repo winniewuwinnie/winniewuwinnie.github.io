@@ -1,3 +1,4 @@
+https://winniewuwinnie.github.io/2023/01/05/Palindrome-Number-LeetCode/
 https://winniewuwinnie.github.io/2023/01/03/Richest%20Customer%20Wealth%20-%20LeetCode/
 https://winniewuwinnie.github.io/2023/01/01/JS%E5%B8%B8%E8%A6%8B%E7%B8%AE%E5%AF%AB/
 https://winniewuwinnie.github.io/2023/01/02/ES%20Module/
