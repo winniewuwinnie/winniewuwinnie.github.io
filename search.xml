@@ -549,7 +549,7 @@
 <tbody><tr>
 <td>v-on</td>
 <td><code>v-on:DOM事件=&quot; &quot;</code></td>
-<td><code>@:DOM事件=&quot;&quot;</code></td>
+<td><code>@DOM事件=&quot;&quot;</code></td>
 <td>觸發 methods 方法。<br> 常用 DOM 事件 click、change、submit。</td>
 </tr>
 <tr>
