@@ -536,7 +536,8 @@
 <td>修飾掉首尾的空白</td>
 </tr>
 </tbody></table>
-<h2 id="事件觸發-v-on"><a href="#事件觸發-v-on" class="headerlink" title="事件觸發 v-on"></a>事件觸發 v-on</h2><table>
+<h2 id="事件觸發-v-on"><a href="#事件觸發-v-on" class="headerlink" title="事件觸發 v-on"></a>事件觸發 v-on</h2><p><a href="https://codepen.io/WinnieWuWinnie/pen/PoBWYjY">範例 Codepen</a></p>
+<table>
 <thead>
 <tr>
 <th>名稱</th>
@@ -564,7 +565,7 @@
 <li>動態物件方法，在一個物件上需加入多個事件，但此方法無法傳入參數。<code>v-on=&quot;&#123;DOM事件:method方法 ,...&#125;&quot;</code></li>
 </ul>
 <h3 id="v-on-修飾符"><a href="#v-on-修飾符" class="headerlink" title="v-on 修飾符"></a>v-on 修飾符</h3><blockquote>
-<p>v-on.修飾符&#x3D;” “</p>
+<p>v-on: DOM 事件.修飾符&#x3D;” “</p>
 </blockquote>
 <p><a href="https://codepen.io/WinnieWuWinnie/pen/qByRdVM?editors=1111">範例 Codepen</a><br><a href="https://codepen.io/WinnieWuWinnie/pen/LYBxVgq">補充 Codepen</a></p>
 <h4 id="按鍵修飾符（鍵盤事件）"><a href="#按鍵修飾符（鍵盤事件）" class="headerlink" title="按鍵修飾符（鍵盤事件）"></a>按鍵修飾符（鍵盤事件）</h4><table>
